@@ -4,7 +4,7 @@ NAME=$1
 SHOW_NAME="$(tmux show -gqv '@tmux-icon-window-show-name')"
 
 function get_shell_icon() {
-  local default_shell_icon=""
+  local default_shell_icon="󰣇"
   local shell_icon
   shell_icon="$(tmux show -gqv '@tmux-icon-window-shell-icon')"
   if [ "$shell_icon" != "" ]; then
@@ -28,7 +28,7 @@ get_icon() {
     echo "$SHELL_ICON"
     ;;
   vi | vim | nvim | lvim | cvim)
-    echo ""
+    echo ""
     ;;
   lazygit | git | tig)
     echo ""
@@ -48,9 +48,9 @@ get_icon() {
   beam | beam.smp) # Erlang runtime
     echo ""
     ;;
-  rustc | rustup)
+  rustc | rustup | cargo)
     echo ""
-    ;; 
+    ;;
   Python | python3 | Python3 | python)
     echo ""
     ;;
